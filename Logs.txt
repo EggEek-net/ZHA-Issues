@@ -1,0 +1,129 @@
+[0x0000:zdo] ZDO request ZDOCmd.Mgmt_Permit_Joining_req: [60, <Bool.false: 0>]
+Device 0x4898 (60:a4:23:ff:fe:ab:49:5c) joined the network
+[0x4898] Requesting 'Node Descriptor'
+Tries remaining: 2
+[0x4898] Extending timeout for 0x03 request
+Device 0x4898 (60:a4:23:ff:fe:ab:49:5c) joined the network
+Skip initialization for existing device 60:a4:23:ff:fe:ab:49:5c
+[0x4898:zdo] ZDO request ZDOCmd.Device_annce: [0x4898, 60:a4:23:ff:fe:ab:49:5c, 128]
+Device 0x4898 (60:a4:23:ff:fe:ab:49:5c) joined the network
+Skip initialization for existing device 60:a4:23:ff:fe:ab:49:5c
+[0x4898:zdo] ZDO request ZDOCmd.Device_annce: [0x4898, 60:a4:23:ff:fe:ab:49:5c, 128]
+[0x4898] Node Descriptor: NodeDescriptor(byte1=2, byte2=64, mac_capability_flags=128, manufacturer_code=4098, maximum_buffer_size=82, maximum_incoming_transfer_size=82, server_mask=11264, maximum_outgoing_transfer_size=82, descriptor_capability_field=0)
+[0x4898] Discovering endpoints
+Tries remaining: 3
+[0x4898] Extending timeout for 0x05 request
+[0x4898] Discovered endpoints: [1]
+[0x4898:1] Discovering endpoint information
+Tries remaining: 3
+[0x4898] Extending timeout for 0x07 request
+[0x4898:1] Discovered endpoint information: SizePrefixedSimpleDescriptor(endpoint=1, profile=260, device_type=81, device_version=1, input_clusters=[0, 4, 5, 61184], output_clusters=[25, 10])
+Unknown cluster 61184
+[0x4898] Extending timeout for 0x09 request
+[0x4898:1:0x0000] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=GLOBAL_COMMAND manufacturer_specific=False is_reply=True disable_default_response=True> manufacturer=None tsn=9 command_id=Command.Read_Attributes_rsp>
+[0x4898:1] Manufacturer: _TZE200_ckud7u2l
+[0x4898:1] Model: TS0601
+Checking quirks for _TZE200_ckud7u2l TS0601 (60:a4:23:ff:fe:ab:49:5c)
+Considering <class 'zhaquirks.tuya.electric_heating.MoesBHT'>
+Found custom device replacement for 60:a4:23:ff:fe:ab:49:5c: <class 'zhaquirks.tuya.electric_heating.MoesBHT'>
+device - 0x4898:60:a4:23:ff:fe:ab:49:5c entering async_device_initialized - is_new_join: True
+device - 0x4898:60:a4:23:ff:fe:ab:49:5c has joined the ZHA zigbee network
+[0x4898](TS0601): started configuration
+[0x4898:ZDO](TS0601): 'async_configure' stage succeeded
+[0x4898:1:0x0201]: bound 'thermostat' cluster: Status.SUCCESS
+[0x4898:1:0x0201]: attr reporting for '{'local_temp': (30, 900, 25), 'occupied_cooling_setpoint': (30, 900, 25), 'occupied_heating_setpoint': (30, 900, 25), 'unoccupied_cooling_setpoint': (30, 900, 25)}' on 'thermostat': ConfigureReportingResponseRecord(status=0)
+[0x4898:1:0x0201]: attr reporting for '{'unoccupied_heating_setpoint': (30, 900, 25), 'running_mode': (30, 900, 25), 'running_state': (30, 900, 5), 'system_mode': (30, 900, 25)}' on 'thermostat': ConfigureReportingResponseRecord(status=0)
+[0x4898:1:0x0201]: attr reporting for '{'occupancy': (30, 900, 1), 'pi_cooling_demand': (30, 900, 5), 'pi_heating_demand': (30, 900, 5)}' on 'thermostat': ConfigureReportingResponseRecord(status=0)
+[0x4898:1:0x0201]: finished channel configuration
+[0x4898] Extending timeout for 0x0b request
+[0x4898] Extending timeout for 0x0d request
+[0x4898:zdo] ZDO request ZDOCmd.Node_Desc_req: [0x0000]
+[0x4898:zdo] Unsupported ZDO request:ZDOCmd.Node_Desc_req
+[0x4898:1:0x0000]: bound 'basic' cluster: Status.SUCCESS
+[0x4898:1:0x0000]: finished channel configuration
+[0x4898] Extending timeout for 0x0f request
+[0x4898:1:0x0019]: bound 'ota' cluster: Status.SUCCESS
+[0x4898:1:0x0019]: finished channel configuration
+[0x4898:1:0x0000] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=GLOBAL_COMMAND manufacturer_specific=False is_reply=True disable_default_response=True> manufacturer=None tsn=15 command_id=Command.Read_Attributes_rsp>
+[0x4898:1:0x0000]: initializing channel: from_cache: False
+[0x4898:1:0x0201]: 'async_configure' stage succeeded
+[0x4898:1:0x0000]: 'async_configure' stage succeeded
+[0x4898:1:0x0019]: 'async_configure' stage succeeded
+[0x4898](TS0601): completed configuration
+[0x4898](TS0601): stored in registry: ZhaDeviceEntry(name='_TZE200_ckud7u2l TS0601', ieee='60:a4:23:ff:fe:ab:49:5c', last_seen=1607881459.0126097)
+[0x4898](TS0601): started initialization
+[0x4898:ZDO](TS0601): 'async_initialize' stage succeeded
+[0x4898:1:0x0201]: read attributes: Success: {}. Failed: {'abs_min_heat_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'abs_max_heat_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'abs_min_cool_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'abs_max_cool_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>}
+[0x4898:1:0x0201]: read attributes: Success: {}. Failed: {'max_cool_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'max_heat_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'min_cool_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'min_heat_setpoint_limit': <Status.UNSUPPORTED_ATTRIBUTE: 134>}
+[0x4898:1:0x0201]: Attribute report 'MoesBHTThermostat'[ctrl_seqe_of_oper] = ControlSequenceOfOperation.Heating_Only
+[0x4898:1:0x0201]: read attributes: Success: {'ctrl_seqe_of_oper': <ControlSequenceOfOperation.Heating_Only: 2>}. Failed: {'local_temp': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'occupancy': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'occupied_cooling_setpoint': <Status.UNSUPPORTED_ATTRIBUTE: 134>}
+[0x4898:1:0x0201]: read attributes: Success: {}. Failed: {'occupied_heating_setpoint': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'pi_cooling_demand': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'pi_heating_demand': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'running_mode': <Status.UNSUPPORTED_ATTRIBUTE: 134>}
+[0x4898:1:0x0201]: read attributes: Success: {}. Failed: {'running_state': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'system_mode': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'unoccupied_heating_setpoint': <Status.UNSUPPORTED_ATTRIBUTE: 134>, 'unoccupied_cooling_setpoint': <Status.UNSUPPORTED_ATTRIBUTE: 134>}
+[0x4898:1:0x0201]: initializing channel: from_cache: False
+[0x4898] Extending timeout for 0x11 request
+[0x4898:1:0x0019]: initializing channel: from_cache: False
+[0x4898:1:0x0000] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=GLOBAL_COMMAND manufacturer_specific=False is_reply=True disable_default_response=True> manufacturer=None tsn=17 command_id=Command.Read_Attributes_rsp>
+[0x4898:1:0x0000]: initializing channel: from_cache: False
+[0x4898:1:0x0201]: 'async_initialize' stage succeeded
+[0x4898:1:0x0000]: 'async_initialize' stage succeeded
+[0x4898:1:0x0019]: 'async_initialize' stage succeeded
+[0x4898](TS0601): power source: Battery or Unknown
+[0x4898](TS0601): completed initialization
+[0x4898:1:0x000a] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=GLOBAL_COMMAND manufacturer_specific=False is_reply=False disable_default_response=False> manufacturer=None tsn=5 command_id=Command.Read_Attributes>
+[0x4898:1:0x000a] ZCL request 0x0000: [[7]]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=True> manufacturer=None tsn=6 command_id=36>
+[0x4898:1:0xef00] Unknown cluster-specific command 36
+[0x4898:1:0xef00] ZCL request 0x0024: b'\x00\t'
+[0x4898:1:0xef00] No handler for cluster command 36
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=7 command_id=2>
+[0x4898:1:0xef00] ZCL request 0x0002: [Command(status=10, tsn=82, command_id=614, function=0, data=[4, 0, 0, 0, 5])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=7 command_id=2>
+[0x4898:1:0xef00] ZCL request 0x0002: [Command(status=10, tsn=82, command_id=614, function=0, data=[4, 0, 0, 0, 5])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=7 command_id=2>
+[0x4898:1:0xef00] ZCL request 0x0002: [Command(status=10, tsn=82, command_id=614, function=0, data=[4, 0, 0, 0, 5])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=8 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=83, command_id=615, function=0, data=[4, 0, 0, 0, 35])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=9 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=84, command_id=514, function=0, data=[4, 0, 0, 0, 200])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=10 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=85, command_id=515, function=0, data=[4, 0, 0, 0, 200])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=11 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=86, command_id=515, function=0, data=[4, 0, 0, 0, 200])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=12 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=87, command_id=1028, function=0, data=[1, 2])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=13 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=88, command_id=1028, function=0, data=[1, 2])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=14 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=89, command_id=263, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=15 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=90, command_id=1293, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=16 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=91, command_id=556, function=0, data=[4, 255, 255, 255, 246])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=17 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=92, command_id=104, function=0, data=[3, 0, 5, 10])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=18 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=93, command_id=617, function=0, data=[4, 0, 0, 1, 44])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=19 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=94, command_id=1130, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=20 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=95, command_id=619, function=0, data=[4, 0, 0, 0, 20])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=21 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=96, command_id=620, function=0, data=[4, 0, 0, 0, 15])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=22 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=97, command_id=621, function=0, data=[4, 0, 0, 0, 40])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=23 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=98, command_id=366, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=24 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=99, command_id=1135, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=25 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=100, command_id=112, function=0, data=[18, 6, 0, 20, 8, 0, 15, 11, 30, 15, 12, 30, 15, 17, 30, 20, 22, 0, 15])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=26 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=101, command_id=113, function=0, data=[18, 134, 0, 20, 8, 0, 15, 11, 30, 15, 12, 30, 15, 17, 30, 20, 22, 0, 15])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=27 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=102, command_id=626, function=0, data=[4, 0, 0, 0, 15])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=28 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=103, command_id=371, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=29 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=104, command_id=372, function=0, data=[1, 0])]
+[0x4898:1:0xef00] ZCL deserialize: <ZCLHeader frame_control=<FrameControl frame_type=CLUSTER_COMMAND manufacturer_specific=False is_reply=True disable_default_response=False> manufacturer=None tsn=30 command_id=1>
+[0x4898:1:0xef00] ZCL request 0x0001: [Command(status=10, tsn=105, command_id=629, function=0, data=[4, 0, 0, 0, 1])]
